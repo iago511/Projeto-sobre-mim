@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    display: flex;
+    width: 100%;
+    background-color: rgb(204, 223, 223);
+    padding: 15px 30px;
+    
+
+}
+nav, ul{
+    display: flex;
+    align-content: space-around;
+    margin: auto;
+}
+#partes{
+    margin-left: 60px;
+}
+
+header nav ul #li a:hover {
+    text-decoration: underline; /* efeito ao passar o mouse */
+}
+header span {
+
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    box-sizing: border-box;
+}
+
+.introducao-container{
+    text-align: center;
+    padding: 30px 50px;
+    
+}
+hr{
+    width: 200px;
+}
+h2{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+#quadrados {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;     
+    gap: 40px;               
+    margin-top: 40px;
+}
+
+#quadrados > div {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 800px;    
+
+}
+
+
+
+ol {
+    padding-left: 40%; 
+    text-align: left;  
+}
+
+#imagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    height: 225px;
+    max-width: 500px;
+    object-fit: cover;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+#Lugares-conheci, #Curiosidades, #Lugares-conhecer{
+    box-shadow: 7px 7px 13px grey;
+}
+
+#Pontos-header{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+    margin-left: 300px;
+}
