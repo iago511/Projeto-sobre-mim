@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jumpscare</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      overflow: hidden;
+    }
+
+    /* Botão inicial */
+    #startBtn {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: linear-gradient(45deg, red, darkred);
+      color: white;
+      transition: transform 0.2s;
+    }
+    #startBtn:hover {
+      transform: scale(1.1);
+    }
+
+    /* A imagem ocupa a tela inteira */
+    #jumpscare {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Preenche a tela inteira */
+      display: none; /* começa escondida */
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botão que ativa o jumpscare -->
+  <button id="startBtn">Clique Aqui</button>
+
+  <!-- Áudio do susto -->
+  <audio id="scream" src="wega-jumpscare.mp3" preload="auto"></audio>
+
+  <!-- Imagem do susto -->
+  <img id="jumpscare" src="VacaMedonha.webp"Jumpscare">
+
+  <script>
+    const scream = document.getElementById("scream");
+    const img = document.getElementById("jumpscare");
+    const btn = document.getElementById("startBtn");
+
+    btn.addEventListener("click", () => {
+      btn.style.display = "none"; // esconde o botão
+      img.style.display = "block"; // mostra a imagem
+      scream.play(); // toca o som
+    });
+  </script>
+</body>
+</html>
+
